@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Final Project WebMap</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <!-- Font Family !-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,200&display=swap" rel="stylesheet">
+  <!-- Mapbox JS API !-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <!-- Mapbox CSS!-->
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <!-- MapBox API -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+</head>
+<!-- Side Bar Main Part -->
+<div id='map'></div>
+<div class="map-overlay" id="console">
+  <h1>Colombia Tree Cover Loss (2002-2021)</h1>
+  <p><a href='https://www.globalforestwatch.org/dashboards/country/COL/'>Original Data</a></p>
+  <div id="pd">
+    <p>Tree cover loss is defined as <i>stand replacement disturbance</i> or removal of tree cover canopy at the pixel scale. It must not be confused with deforestation. Satellite information comes from Landsat data.<strong> Select a department to modify the time series.</strong></p>
+  </div>
+  <!-- Legend -->
+  <div class="map-overlay" id="legend">
+    <div>
+      <center>&#8592; <strong>More Tree Cover Reduction (%)</strong></center>
+    </div>
+  </div>
+
+  <!-- D3 Part-->
+  <!-- Load d3.js -->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <!-- Create a div where the graph will take place -->
+  <div class='map-overlay' id="linegraph"></div>
+  <!-- Initialize a select button -->
+  <select class='map-overlay' id="selectButton"></select>
+  <!-- Color Scale -->
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+</div>
+</body>
+
+<!-- Info Button-->
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<div class="col-md-12">
+  <div class="info">
+    <i class="icon-info-sign"></i>
+    <span class="extra-info">
+      Click polygons for finding destandarize stats
+    </span>
+  </div><br />
+</div>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
