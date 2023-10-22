@@ -104,7 +104,7 @@ var svg = d3
 
 //Read the data
 d3.csv(
-  "https://raw.githubusercontent.com/aamontalvo/aamontalvo.github.io/main/project/treecover_loss_processdata2.csv",
+  "https://raw.githubusercontent.com/aamontalvo/Cartography-Labs/main/project/treecover_loss_processdata2.csv",
   function (data) {
     // List of groups
     var allGroup = d3
@@ -233,7 +233,7 @@ map.on("load", () => {
   map.addSource("states", {
     type: "geojson",
     data:
-      "https://raw.githubusercontent.com/aamontalvo/aamontalvo.github.io/main/project/TreeCoverLoss_popup.geojson"
+       "https://raw.githubusercontent.com/aamontalvo/Cartography-Labs/main/project/TreeCoverLoss_popup.geojson"
   });
 
   // Polygons
